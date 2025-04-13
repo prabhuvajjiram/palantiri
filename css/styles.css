@@ -1,11 +1,11 @@
 /* Global Styles */
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2c3e50;
-    --accent-color: #e74c3c;
-    --light-color: #f8f9fa;
-    --dark-color: #343a40;
-    --text-color: #333333;
+    --primary-color: #0056b3;
+    --secondary-color: #1a237e;
+    --accent-color: #d32f2f;
+    --light-color: #ffffff;
+    --dark-color: #1a1a1a;
+    --text-color: #1a1a1a;
     --light-text: #ffffff;
     --font-primary: 'Roboto', sans-serif;
     --font-secondary: 'Open Sans', sans-serif;
@@ -22,6 +22,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     margin-bottom: 1rem;
+    color: var(--dark-color);
 }
 
 a {
@@ -32,6 +33,7 @@ a {
 
 a:hover {
     color: var(--secondary-color);
+    text-decoration: underline;
 }
 
 .section-title {
@@ -49,29 +51,34 @@ a:hover {
 
 .btn-primary {
     background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
 }
 
 .btn-primary:hover {
     background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
+    color: var(--light-text);
 }
 
 .btn-outline-primary {
     color: var(--primary-color);
     border-color: var(--primary-color);
+    padding: 0.75rem 2rem;
+    font-weight: 600;
 }
 
 .btn-outline-primary:hover {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--light-text);
 }
 
 /* Navigation */
 .navbar {
     padding: 1rem 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--light-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
 }
 
@@ -86,7 +93,7 @@ a:hover {
 }
 
 .nav-link {
-    color: var(--text-color);
+    color: var(--dark-color);
     font-weight: 500;
     padding: 0.5rem 1rem;
     margin: 0 0.2rem;
@@ -102,6 +109,16 @@ a:hover {
     padding: 8rem 0 5rem;
     background-color: var(--light-color);
     position: relative;
+}
+
+.hero-image {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--light-color);
+}
+
+.hero-image h1 {
+    color: var(--light-color);
+    margin-bottom: 1rem;
 }
 
 .hero-title {
@@ -124,18 +141,18 @@ a:hover {
 
 /* Services Snapshot */
 .service-card {
-    padding: 2rem;
+    background-color: var(--light-color);
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    background-color: white;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
     height: 100%;
-    text-align: center;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 .service-icon {
@@ -145,8 +162,15 @@ a:hover {
 }
 
 .service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    color: var(--dark-color);
+    margin: 1.5rem 0;
+    font-weight: 700;
+}
+
+.service-card p {
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 /* Why Choose Us */
@@ -449,4 +473,40 @@ a:hover {
         margin-top: 10px;
         justify-content: center;
     }
+}
+
+/* Text */
+p {
+    color: #4a4a4a;
+    line-height: 1.8;
+}
+
+/* Cookies Button */
+#acceptCookies {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+}
+
+#acceptCookies:hover {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+}
+
+/* Form Elements */
+input, textarea, select {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    color: var(--dark-color);
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 86, 179, 0.25);
+    outline: none;
 }
