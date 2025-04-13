@@ -1,0 +1,19 @@
+{
+  "name": "palantiri-technology",
+  "version": "1.0.0",
+  "description": "Palantiri Technology and Services Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"No tests configured\""
+  },
+  "keywords": [
+    "technology",
+    "services",
+    "backend",
+    "software",
+    "ai",
+    "machine-learning"
+  ],
+  "author": "Palantiri Technology",
+  "license": "ISC"
+}

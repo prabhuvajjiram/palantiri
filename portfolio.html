@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Palantiri Technology and Services - Showcasing our projects and solutions">
+    <title>Portfolio - Palantiri Technology and Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="Palantiri Logo" height="40" class="me-2">
+                    <span class="brand-text">Palantiri</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="careers.html">Careers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Portfolio Hero Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h1 class="section-title">Our Portfolio</h1>
+                    <p class="lead">Explore our projects and solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="portfolio-filter mb-5">
+                        <button class="btn btn-outline-primary active m-2" data-filter="all">All Projects</button>
+                        <button class="btn btn-outline-primary m-2" data-filter="internal">Internal</button>
+                        <button class="btn btn-outline-primary m-2" data-filter="client-facing">Client-Facing</button>
+                        <button class="btn btn-outline-primary m-2" data-filter="in-development">In Development</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-grid">
+        <div class="container">
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="client-facing">
+                    <div class="portfolio-item">
+                        <img src="images/tech/tech-crm.svg" alt="Angel Stones CRM System" class="portfolio-image">
+                        <div class="portfolio-tag">Client-Facing</div>
+                        <div class="portfolio-info">
+                            <h4>Angel Stones CRM System</h4>
+                            <p>Comprehensive CRM solution for order management and customer tracking</p>
+                            <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#portfolioModal1">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="internal">
+                    <div class="portfolio-item">
+                        <img src="images/tech/tech-automation.svg" alt="Order Processing Automation" class="portfolio-image">
+                        <div class="portfolio-tag">Internal</div>
+                        <div class="portfolio-info">
+                            <h4>Order Processing Automation</h4>
+                            <p>Streamlined order processing workflow with automated notifications</p>
+                            <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#portfolioModal2">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="client-facing">
+                    <div class="portfolio-item">
+                        <img src="images/tech/tech-ecommerce.svg" alt="E-commerce Integration" class="portfolio-image">
+                        <div class="portfolio-tag">Client-Facing</div>
+                        <div class="portfolio-info">
+                            <h4>E-commerce Integration</h4>
+                            <p>Seamless integration between online sales and backend systems</p>
+                            <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#portfolioModal3">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="in-development">
+                    <div class="portfolio-item">
+                        <img src="images/tech/tech-inventory-simple.svg" alt="Mobile Inventory Management" class="portfolio-image">
+                        <div class="portfolio-tag">In Development</div>
+                        <div class="portfolio-info">
+                            <h4>Mobile Inventory Management</h4>
+                            <p>Real-time inventory tracking application for mobile devices</p>
+                            <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#portfolioModal4">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="internal">
+                    <div class="portfolio-item">
+                        <img src="images/tech/tech-office.svg" alt="CAD Design Tool" class="portfolio-image">
+                        <div class="portfolio-tag">Internal</div>
+                        <div class="portfolio-info">
+                            <h4>CAD Design Tool</h4>
+                            <p>Custom tool for streamlining the CAD design modification process</p>
+                            <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#portfolioModal5">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="in-development">
+                    <div class="portfolio-item">
+                        <img src="images/tech/tech-communication.svg" alt="Client Communication Portal" class="portfolio-image">
+                        <div class="portfolio-tag">In Development</div>
+                        <div class="portfolio-info">
+                            <h4>Client Communication Portal</h4>
+                            <p>Secure portal for client communications and document sharing</p>
+                            <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#portfolioModal6">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 7 - AI/ML Project -->
+                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="in-development">
+                    <div class="portfolio-item">
+                        <img src="images/tech/tech-ai.svg" alt="AI-Powered Order Prediction System" class="portfolio-image">
+                        <div class="portfolio-tag">In Development</div>
+                        <div class="portfolio-info">
+                            <h4>AI-Powered Order Prediction</h4>
+                            <p>Machine learning system for inventory forecasting and order management</p>
+                            <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#portfolioModal7">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 8 - Rajambal Cottons E-commerce -->
+                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="client-facing">
+                    <div class="portfolio-item">
+                        <img src="images/tech/tech-ecommerce.svg" alt="Rajambal Cottons E-commerce" class="portfolio-image">
+                        <div class="portfolio-tag">Client-Facing</div>
+                        <div class="portfolio-info">
+                            <h4>Rajambal Cottons E-commerce</h4>
+                            <p>Complete e-commerce solution for premium cotton products retailer</p>
+                            <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#portfolioModal8">More Info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Modals -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="portfolioModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Angel Stones CRM System</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/tech/tech-crm.svg" alt="Angel Stones CRM System" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Project Overview</h4>
+                            <p>A comprehensive customer relationship management system designed specifically for Angel Stones LLC. This system manages the entire customer journey from initial inquiry to order fulfillment and follow-up.</p>
+                            
+                            <h5>Key Features:</h5>
+                            <ul>
+                                <li>Customer database management</li>
+                                <li>Quote generation and tracking</li>
+                                <li>Order management</li>
+                                <li>Inventory integration</li>
+                                <li>Customer communication tracking</li>
+                                <li>Reporting and analytics</li>
+                            </ul>
+                            
+                            <h5>Technologies Used:</h5>
+                            <p>PHP, MySQL, JavaScript, Bootstrap, AJAX</p>
+                            
+                            <h5>Client:</h5>
+                            <p>Angel Stones LLC</p>
+                            
+                            <h5>Status:</h5>
+                            <p>Live and operational</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="portfolioModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Order Processing Automation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/tech/tech-automation.svg" alt="Order Processing Automation" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Project Overview</h4>
+                            <p>An internal system that automates the order processing workflow, significantly reducing manual tasks and potential for errors. The system includes automated notifications and status updates throughout the order lifecycle.</p>
+                            
+                            <h5>Key Features:</h5>
+                            <ul>
+                                <li>Automated order status updates</li>
+                                <li>Email notifications to relevant teams</li>
+                                <li>Task assignment and tracking</li>
+                                <li>Workflow visualization</li>
+                                <li>Performance metrics</li>
+                            </ul>
+                            
+                            <h5>Technologies Used:</h5>
+                            <p>JavaScript, Node.js, Express, MongoDB</p>
+                            
+                            <h5>Client:</h5>
+                            <p>Internal</p>
+                            
+                            <h5>Status:</h5>
+                            <p>Fully implemented</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="portfolioModal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">E-commerce Integration</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/tech/tech-ecommerce.svg" alt="E-commerce Integration" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Project Overview</h4>
+                            <p>A seamless integration solution that connects online sales platforms with backend inventory and order management systems. This ensures real-time data synchronization and eliminates the need for manual data entry.</p>
+                            
+                            <h5>Key Features:</h5>
+                            <ul>
+                                <li>Real-time inventory synchronization</li>
+                                <li>Automated order import</li>
+                                <li>Status updates to customers</li>
+                                <li>Multi-platform support</li>
+                                <li>Error handling and notifications</li>
+                            </ul>
+                            
+                            <h5>Technologies Used:</h5>
+                            <p>PHP, REST APIs, JSON, MySQL</p>
+                            
+                            <h5>Client:</h5>
+                            <p>Angel Stones LLC</p>
+                            
+                            <h5>Status:</h5>
+                            <p>Live and operational</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal fade" id="portfolioModal4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mobile Inventory Management</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/tech/tech-inventory-simple.svg" alt="Mobile Inventory Management" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Project Overview</h4>
+                            <p>A mobile application designed for real-time inventory tracking and management. The app allows warehouse staff to update inventory levels, scan barcodes, and manage stock from anywhere in the facility.</p>
+                            
+                            <h5>Key Features:</h5>
+                            <ul>
+                                <li>Barcode scanning</li>
+                                <li>Real-time updates</li>
+                                <li>Stock level alerts</li>
+                                <li>Location tracking</li>
+                                <li>Reporting capabilities</li>
+                                <li>Offline functionality</li>
+                            </ul>
+                            
+                            <h5>Technologies Used:</h5>
+                            <p>React Native, Firebase, REST APIs</p>
+                            
+                            <h5>Client:</h5>
+                            <p>Angel Stones LLC</p>
+                            
+                            <h5>Status:</h5>
+                            <p>In development (80% complete)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="modal fade" id="portfolioModal5" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">CAD Design Tool</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/tech/tech-office.svg" alt="CAD Design Tool" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Project Overview</h4>
+                            <p>A custom-built tool that streamlines the process of modifying CAD designs for stone products. The tool includes templates, common modifications, and a user-friendly interface to speed up the design process.</p>
+                            
+                            <h5>Key Features:</h5>
+                            <ul>
+                                <li>Template library</li>
+                                <li>Common modification presets</li>
+                                <li>Design history tracking</li>
+                                <li>Integration with CAD software</li>
+                                <li>Version control</li>
+                            </ul>
+                            
+                            <h5>Technologies Used:</h5>
+                            <p>Python, Qt Framework, CAD API Integration</p>
+                            
+                            <h5>Client:</h5>
+                            <p>Internal</p>
+                            
+                            <h5>Status:</h5>
+                            <p>Fully implemented</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="modal fade" id="portfolioModal6" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Client Communication Portal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/tech/tech-communication.svg" alt="Client Communication Portal" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Project Overview</h4>
+                            <p>A secure portal for client communications and document sharing. The portal provides a centralized platform for discussions, approvals, and file exchanges between the company and its clients.</p>
+                            
+                            <h5>Key Features:</h5>
+                            <ul>
+                                <li>Secure messaging</li>
+                                <li>Document sharing</li>
+                                <li>Approval workflows</li>
+                                <li>Notification system</li>
+                                <li>User permission management</li>
+                                <li>Mobile-responsive design</li>
+                            </ul>
+                            
+                            <h5>Technologies Used:</h5>
+                            <p>PHP, Laravel, Vue.js, MySQL</p>
+                            
+                            <h5>Client:</h5>
+                            <p>Angel Stones LLC</p>
+                            
+                            <h5>Status:</h5>
+                            <p>In development (60% complete)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 7 -->
+    <div class="modal fade" id="portfolioModal7" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">AI-Powered Order Prediction System</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/tech/tech-ai.svg" alt="AI-Powered Order Prediction System" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Project Overview</h4>
+                            <p>A machine learning system designed to predict order volumes and optimize inventory levels. The system uses historical data and real-time market trends to make accurate predictions and reduce stockouts.</p>
+                            
+                            <h5>Key Features:</h5>
+                            <ul>
+                                <li>Machine learning algorithms</li>
+                                <li>Real-time data integration</li>
+                                <li>Predictive analytics</li>
+                                <li>Automated reporting</li>
+                                <li>Integration with existing systems</li>
+                            </ul>
+                            
+                            <h5>Technologies Used:</h5>
+                            <p>Python, TensorFlow, scikit-learn, pandas</p>
+                            
+                            <h5>Client:</h5>
+                            <p>Internal</p>
+                            
+                            <h5>Status:</h5>
+                            <p>In development (40% complete)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 8 -->
+    <div class="modal fade" id="portfolioModal8" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Rajambal Cottons E-commerce</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/tech/tech-ecommerce.svg" alt="Rajambal Cottons E-commerce" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Project Overview</h4>
+                            <p>Complete e-commerce solution for premium cotton products retailer</p>
+                            
+                            <h5>Key Features:</h5>
+                            <ul>
+                                <li>Product catalog management</li>
+                                <li>Order management</li>
+                                <li>Payment gateway integration</li>
+                                <li>Shipping integration</li>
+                                <li>Customer management</li>
+                            </ul>
+                            
+                            <h5>Technologies Used:</h5>
+                            <p>PHP, Laravel, Vue.js, MySQL</p>
+                            
+                            <h5>Client:</h5>
+                            <p>Rajambal Cottons</p>
+                            
+                            <h5>Status:</h5>
+                            <p>Live and operational</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <section class="cta-section py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Interested in our work?</h2>
+            <p class="mb-4">Contact us to discuss how we can create a custom solution for your business.</p>
+            <a href="contact.html" class="btn btn-light btn-lg">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Palantiri Technology and Services</h5>
+                    <p>Powering global operations from behind the scenes.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-envelope"></i> <a href="mailto:info@palantiri.com">info@palantiri.com</a></li>
+                        <li><i class="bi bi-whatsapp"></i> <a href="https://wa.me/1234567890">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2025 Palantiri Technology and Services. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Portfolio filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.portfolio-filter button');
+            const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get filter value
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Show/hide portfolio items based on filter
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

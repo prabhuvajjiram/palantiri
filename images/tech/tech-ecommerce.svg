@@ -1,0 +1,63 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grad1)"/>
+  
+  <!-- E-commerce Device Mockups -->
+  <!-- Desktop Browser -->
+  <rect x="150" y="100" width="300" height="200" rx="5" ry="5" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="3"/>
+  <rect x="150" y="100" width="300" height="25" rx="5" ry="5" fill="#bdc3c7"/>
+  <circle cx="165" cy="112" r="5" fill="#e74c3c"/>
+  <circle cx="180" cy="112" r="5" fill="#f39c12"/>
+  <circle cx="195" cy="112" r="5" fill="#2ecc71"/>
+  
+  <!-- Website Content -->
+  <rect x="170" y="140" width="260" height="140" fill="#ffffff"/>
+  <rect x="170" y="140" width="260" height="30" fill="#3498db"/>
+  <text x="190" y="160" font-family="Arial" font-size="12" fill="#ffffff">Rajambal Cottons Shop</text>
+  
+  <!-- Product Grid -->
+  <rect x="180" y="180" width="70" height="70" fill="#f1c40f" opacity="0.8"/>
+  <rect x="260" y="180" width="70" height="70" fill="#e74c3c" opacity="0.8"/>
+  <rect x="340" y="180" width="70" height="70" fill="#9b59b6" opacity="0.8"/>
+  
+  <!-- Mobile Device -->
+  <rect x="500" y="120" width="150" height="250" rx="10" ry="10" fill="#34495e" stroke="#2c3e50" stroke-width="3"/>
+  <rect x="510" y="140" width="130" height="200" fill="#ffffff"/>
+  
+  <!-- Mobile Content -->
+  <rect x="510" y="140" width="130" height="25" fill="#3498db"/>
+  <text x="515" y="157" font-family="Arial" font-size="10" fill="#ffffff">Rajambal Shop</text>
+  
+  <!-- Mobile Products -->
+  <rect x="520" y="175" width="110" height="30" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <rect x="520" y="215" width="110" height="30" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <rect x="520" y="255" width="110" height="30" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <rect x="520" y="295" width="110" height="30" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  
+  <!-- Shopping Cart -->
+  <circle cx="350" cy="380" r="60" fill="#ffffff" stroke="#2c3e50" stroke-width="3"/>
+  <path d="M320,370 L340,370 L345,345 L385,345 L390,370 L410,370 L400,330 L330,330 Z" fill="#3498db"/>
+  <circle cx="350" cy="390" r="8" fill="#2c3e50"/>
+  <circle cx="365" cy="390" r="8" fill="#2c3e50"/>
+  
+  <!-- Indian Textile Designs -->
+  <rect x="150" y="350" width="120" height="120" fill="#e74c3c" opacity="0.8"/>
+  <path d="M150,350 L270,470" stroke="#ffffff" stroke-width="2"/>
+  <path d="M150,470 L270,350" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="210" cy="410" r="30" fill="#f39c12" opacity="0.8"/>
+  
+  <!-- Payment Processing Icon -->
+  <rect x="450" y="400" width="200" height="120" rx="10" ry="10" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="3"/>
+  <rect x="470" y="430" width="50" height="10" fill="#34495e"/>
+  <rect x="470" y="450" width="30" height="10" fill="#34495e"/>
+  <rect x="470" y="470" width="160" height="30" fill="#27ae60"/>
+  <text x="510" y="490" font-family="Arial" font-size="14" fill="#ffffff">CHECKOUT</text>
+  
+  <!-- Title -->
+  <text x="400" y="550" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">E-COMMERCE INTEGRATION</text>
+</svg>

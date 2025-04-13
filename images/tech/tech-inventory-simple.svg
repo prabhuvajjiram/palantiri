@@ -1,0 +1,29 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#27ae60"/>
+  <rect x="250" y="100" width="300" height="300" rx="30" ry="30" fill="#2ecc71" stroke="#ffffff" stroke-width="5"/>
+  
+  <!-- Mobile phone outline -->
+  <rect x="300" y="150" width="200" height="350" rx="20" ry="20" fill="#ffffff" stroke="#34495e" stroke-width="5"/>
+  <rect x="310" y="170" width="180" height="290" fill="#ecf0f1"/>
+  <circle cx="400" cy="480" r="15" fill="#bdc3c7" stroke="#34495e" stroke-width="2"/>
+  
+  <!-- Inventory list -->
+  <rect x="320" y="180" width="160" height="40" fill="#3498db" rx="5" ry="5"/>
+  <text x="400" y="205" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Inventory App</text>
+  
+  <rect x="330" y="240" width="140" height="30" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="350" y="260" font-family="Arial" font-size="14" fill="#34495e">Item #1001</text>
+  
+  <rect x="330" y="280" width="140" height="30" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="350" y="300" font-family="Arial" font-size="14" fill="#34495e">Item #1002</text>
+  
+  <rect x="330" y="320" width="140" height="30" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="350" y="340" font-family="Arial" font-size="14" fill="#34495e">Item #1003</text>
+  
+  <rect x="330" y="360" width="140" height="30" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="350" y="380" font-family="Arial" font-size="14" fill="#34495e">Item #1004</text>
+  
+  <!-- Title -->
+  <text x="400" y="75" font-family="Arial" font-size="32" fill="#ffffff" text-anchor="middle" font-weight="bold">MOBILE INVENTORY</text>
+  <text x="400" y="430" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">MANAGEMENT</text>
+</svg>

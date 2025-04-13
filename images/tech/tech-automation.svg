@@ -1,0 +1,84 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9b59b6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grad1)"/>
+  
+  <!-- Automation Gears -->
+  <g transform="translate(400, 300)">
+    <!-- Main Large Gear -->
+    <circle cx="0" cy="0" r="120" fill="#34495e" stroke="#2c3e50" stroke-width="5"/>
+    <circle cx="0" cy="0" r="100" fill="#2c3e50"/>
+    <circle cx="0" cy="0" r="40" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="3"/>
+    
+    <!-- Gear Teeth -->
+    <rect x="-15" y="-140" width="30" height="40" fill="#34495e"/>
+    <rect x="-15" y="100" width="30" height="40" fill="#34495e"/>
+    <rect x="-140" y="-15" width="40" height="30" fill="#34495e"/>
+    <rect x="100" y="-15" width="40" height="30" fill="#34495e"/>
+    
+    <rect x="-100" y="-100" width="30" height="40" transform="rotate(45)" fill="#34495e"/>
+    <rect x="70" y="-100" width="30" height="40" transform="rotate(45)" fill="#34495e"/>
+    <rect x="-100" y="60" width="30" height="40" transform="rotate(45)" fill="#34495e"/>
+    <rect x="70" y="60" width="30" height="40" transform="rotate(45)" fill="#34495e"/>
+  </g>
+  
+  <!-- Smaller Connected Gears -->
+  <g transform="translate(580, 180)">
+    <circle cx="0" cy="0" r="70" fill="#e67e22" stroke="#d35400" stroke-width="3"/>
+    <circle cx="0" cy="0" r="55" fill="#d35400"/>
+    <circle cx="0" cy="0" r="25" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+    
+    <!-- Gear Teeth -->
+    <rect x="-10" y="-85" width="20" height="30" fill="#e67e22"/>
+    <rect x="-10" y="55" width="20" height="30" fill="#e67e22"/>
+    <rect x="-85" y="-10" width="30" height="20" fill="#e67e22"/>
+    <rect x="55" y="-10" width="30" height="20" fill="#e67e22"/>
+    
+    <rect x="-60" y="-60" width="20" height="30" transform="rotate(45)" fill="#e67e22"/>
+    <rect x="30" y="-60" width="20" height="30" transform="rotate(45)" fill="#e67e22"/>
+    <rect x="-60" y="30" width="20" height="30" transform="rotate(45)" fill="#e67e22"/>
+    <rect x="30" y="30" width="20" height="30" transform="rotate(45)" fill="#e67e22"/>
+  </g>
+  
+  <g transform="translate(220, 180)">
+    <circle cx="0" cy="0" r="70" fill="#3498db" stroke="#2980b9" stroke-width="3"/>
+    <circle cx="0" cy="0" r="55" fill="#2980b9"/>
+    <circle cx="0" cy="0" r="25" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+    
+    <!-- Gear Teeth -->
+    <rect x="-10" y="-85" width="20" height="30" fill="#3498db"/>
+    <rect x="-10" y="55" width="20" height="30" fill="#3498db"/>
+    <rect x="-85" y="-10" width="30" height="20" fill="#3498db"/>
+    <rect x="55" y="-10" width="30" height="20" fill="#3498db"/>
+    
+    <rect x="-60" y="-60" width="20" height="30" transform="rotate(45)" fill="#3498db"/>
+    <rect x="30" y="-60" width="20" height="30" transform="rotate(45)" fill="#3498db"/>
+    <rect x="-60" y="30" width="20" height="30" transform="rotate(45)" fill="#3498db"/>
+    <rect x="30" y="30" width="20" height="30" transform="rotate(45)" fill="#3498db"/>
+  </g>
+  
+  <!-- Connecting Lines -->
+  <line x1="280" y1="180" x2="350" y2="210" stroke="#ecf0f1" stroke-width="3" stroke-dasharray="10,5"/>
+  <line x1="520" y1="180" x2="450" y2="210" stroke="#ecf0f1" stroke-width="3" stroke-dasharray="10,5"/>
+  
+  <!-- Data Flow Representation -->
+  <path d="M150,450 C200,480 250,420 300,450 C350,480 400,420 450,450 C500,480 550,420 600,450 C650,480 700,420 750,450" 
+        stroke="#ecf0f1" stroke-width="4" fill="none"/>
+  
+  <!-- Data Points -->
+  <circle cx="200" cy="450" r="8" fill="#f1c40f"/>
+  <circle cx="300" cy="450" r="8" fill="#f1c40f"/>
+  <circle cx="400" cy="450" r="8" fill="#f1c40f"/>
+  <circle cx="500" cy="450" r="8" fill="#f1c40f"/>
+  <circle cx="600" cy="450" r="8" fill="#f1c40f"/>
+  <circle cx="700" cy="450" r="8" fill="#f1c40f"/>
+  
+  <!-- Title -->
+  <text x="400" y="100" font-family="Arial" font-size="36" fill="#ffffff" text-anchor="middle" font-weight="bold">ORDER PROCESSING</text>
+  <text x="400" y="140" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">AUTOMATION</text>
+  <text x="400" y="530" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Streamlined Workflow with Automated Notifications</text>
+</svg>
