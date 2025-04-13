@@ -3,8 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Palantiri Technology and Services - Showcasing our projects and solutions">
+    <meta name="description" content="Portfolio of Palantiri Technology and Services - Showcasing our projects and solutions in backend operations, software development, and technical support">
+    <meta name="keywords" content="Palantiri Technology, portfolio, projects, technology solutions, software development, backend operations, technical support">
+    <meta name="author" content="Palantiri Technology and Services">
     <title>Portfolio - Palantiri Technology and Services</title>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "PortfolioPage",
+        "name": "Portfolio - Palantiri Technology and Services",
+        "description": "Explore Palantiri's portfolio of technology solutions and projects in backend operations, software development, and technical support.",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://palantiri-tech.com/portfolio"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Palantiri Technology and Services",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://palantiri-tech.com/images/logo.png"
+            }
+        }
+    }
+    </script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -82,7 +107,7 @@
                 <!-- Project 1 -->
                 <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="client-facing">
                     <div class="portfolio-item">
-                        <img src="images/tech/tech-crm.svg" alt="Angel Stones CRM System" class="portfolio-image">
+                        <img src="images/tech/tech-crm.svg" alt="Angel Stones CRM System - Comprehensive CRM solution for order management and customer tracking" class="portfolio-image" loading="lazy">
                         <div class="portfolio-tag">Client-Facing</div>
                         <div class="portfolio-info">
                             <h4>Angel Stones CRM System</h4>
@@ -95,11 +120,11 @@
                 <!-- Project 2 -->
                 <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="internal">
                     <div class="portfolio-item">
-                        <img src="images/tech/tech-automation.svg" alt="Order Processing Automation" class="portfolio-image">
+                        <img src="images/tech/tech-automation.svg" alt="Order Processing Automation - Streamlined system for efficient order management" class="portfolio-image" loading="lazy">
                         <div class="portfolio-tag">Internal</div>
                         <div class="portfolio-info">
                             <h4>Order Processing Automation</h4>
-                            <p>Streamlined order processing workflow with automated notifications</p>
+                            <p>Streamlined system for efficient order management</p>
                             <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#portfolioModal2">More Info</button>
                         </div>
                     </div>
@@ -108,11 +133,11 @@
                 <!-- Project 3 -->
                 <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="client-facing">
                     <div class="portfolio-item">
-                        <img src="images/tech/tech-ecommerce.svg" alt="E-commerce Integration" class="portfolio-image">
+                        <img src="images/tech/tech-ecommerce.svg" alt="E-commerce Integration - Seamless integration solution for online sales platforms" class="portfolio-image" loading="lazy">
                         <div class="portfolio-tag">Client-Facing</div>
                         <div class="portfolio-info">
                             <h4>E-commerce Integration</h4>
-                            <p>Seamless integration between online sales and backend systems</p>
+                            <p>Seamless integration solution for online sales platforms</p>
                             <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#portfolioModal3">More Info</button>
                         </div>
                     </div>
@@ -121,7 +146,7 @@
                 <!-- Project 4 -->
                 <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="in-development">
                     <div class="portfolio-item">
-                        <img src="images/tech/tech-inventory-simple.svg" alt="Mobile Inventory Management" class="portfolio-image">
+                        <img src="images/tech/tech-inventory-simple.svg" alt="Mobile Inventory Management - Real-time inventory tracking application for mobile devices" class="portfolio-image" loading="lazy">
                         <div class="portfolio-tag">In Development</div>
                         <div class="portfolio-info">
                             <h4>Mobile Inventory Management</h4>
@@ -134,11 +159,11 @@
                 <!-- Project 5 -->
                 <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="internal">
                     <div class="portfolio-item">
-                        <img src="images/tech/tech-office.svg" alt="CAD Design Tool" class="portfolio-image">
+                        <img src="images/tech/tech-office.svg" alt="CAD Design Tool - Custom-built tool for streamlining CAD design modification process" class="portfolio-image" loading="lazy">
                         <div class="portfolio-tag">Internal</div>
                         <div class="portfolio-info">
                             <h4>CAD Design Tool</h4>
-                            <p>Custom tool for streamlining the CAD design modification process</p>
+                            <p>Custom-built tool for streamlining CAD design modification process</p>
                             <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#portfolioModal5">More Info</button>
                         </div>
                     </div>
@@ -147,7 +172,7 @@
                 <!-- Project 6 -->
                 <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="in-development">
                     <div class="portfolio-item">
-                        <img src="images/tech/tech-communication.svg" alt="Client Communication Portal" class="portfolio-image">
+                        <img src="images/tech/tech-communication.svg" alt="Client Communication Portal - Secure portal for client communications and document sharing" class="portfolio-image" loading="lazy">
                         <div class="portfolio-tag">In Development</div>
                         <div class="portfolio-info">
                             <h4>Client Communication Portal</h4>
@@ -160,7 +185,7 @@
                 <!-- Project 7 - AI/ML Project -->
                 <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="in-development">
                     <div class="portfolio-item">
-                        <img src="images/tech/tech-ai.svg" alt="AI-Powered Order Prediction System" class="portfolio-image">
+                        <img src="images/tech/tech-ai.svg" alt="AI-Powered Order Prediction System - Machine learning system for inventory forecasting and order management" class="portfolio-image" loading="lazy">
                         <div class="portfolio-tag">In Development</div>
                         <div class="portfolio-info">
                             <h4>AI-Powered Order Prediction</h4>
@@ -173,7 +198,7 @@
                 <!-- Project 8 - Rajambal Cottons E-commerce -->
                 <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="client-facing">
                     <div class="portfolio-item">
-                        <img src="images/tech/tech-ecommerce.svg" alt="Rajambal Cottons E-commerce" class="portfolio-image">
+                        <img src="images/tech/tech-ecommerce.svg" alt="Rajambal Cottons E-commerce - Complete e-commerce solution for premium cotton products retailer" class="portfolio-image" loading="lazy">
                         <div class="portfolio-tag">Client-Facing</div>
                         <div class="portfolio-info">
                             <h4>Rajambal Cottons E-commerce</h4>
@@ -587,36 +612,9 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
-    <script>
-        // Portfolio filtering
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.portfolio-filter button');
-            const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    // Get filter value
-                    const filterValue = this.getAttribute('data-filter');
-                    
-                    // Show/hide portfolio items based on filter
-                    portfolioItems.forEach(item => {
-                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        });
-    </script>
 </body>
 </html>
