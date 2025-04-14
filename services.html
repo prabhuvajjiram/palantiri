@@ -132,6 +132,7 @@
             <div class="service-page-item" data-aos="fade-right">
                 <div class="row align-items-center">
                     <div class="col-md-4 text-center" data-aos="fade-right" data-aos-delay="100">
+                        <img src="images/tech/tech-automation.svg" alt="Backend Operations" class="img-fluid service-image mb-3">
                         <i class="bi bi-gear-fill service-icon"></i>
                     </div>
                     <div class="col-md-8" data-aos="fade-left" data-aos-delay="200">
@@ -229,7 +230,64 @@
                         </div>
                     </div>
                     <div class="col-md-4 text-center" data-aos="fade-left" data-aos-delay="200">
+                        <img src="images/tech/tech-ai.svg" alt="Software Development" class="img-fluid service-image mb-3">
                         <i class="bi bi-code-square service-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Machine Learning & AI -->
+    <section class="py-5">
+        <div class="container">
+            <div class="service-page-item" data-aos="fade-right">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center" data-aos="fade-right" data-aos-delay="100">
+                        <img src="images/tech/tech-ai.svg" alt="Machine Learning & AI" class="img-fluid service-image mb-3">
+                        <i class="bi bi-cpu service-icon"></i>
+                    </div>
+                    <div class="col-md-8" data-aos="fade-left" data-aos-delay="200">
+                        <h2>Machine Learning & AI Development</h2>
+                        <p class="lead">Custom AI solutions to power your business innovation</p>
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="d-flex mb-3">
+                                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                    <div>
+                                        <h5>AI Integration</h5>
+                                        <p>Integrate AI capabilities into your existing systems and applications</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex mb-3">
+                                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                    <div>
+                                        <h5>Machine Learning Models</h5>
+                                        <p>Custom models for prediction, classification, and data analysis</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex mb-3">
+                                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                    <div>
+                                        <h5>Chatbots & Virtual Assistants</h5>
+                                        <p>Intelligent conversational interfaces for customer support and operations</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex mb-3">
+                                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                    <div>
+                                        <h5>Data Analysis & Insights</h5>
+                                        <p>Extract valuable insights from your data using advanced AI techniques</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -242,6 +300,7 @@
             <div class="service-page-item" data-aos="fade-right">
                 <div class="row align-items-center">
                     <div class="col-md-4 text-center" data-aos="fade-right" data-aos-delay="100">
+                        <img src="images/tech/tech-communication.svg" alt="Technical Support" class="img-fluid service-image mb-3">
                         <i class="bi bi-headset service-icon"></i>
                     </div>
                     <div class="col-md-8" data-aos="fade-left" data-aos-delay="200">
@@ -339,7 +398,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <h5>Palantiri Technology and Services</h5>
-                    <p>Powering global operations from behind the scenes.</p>
+                    <p>Your dedicated technology operations partner exclusively serving Angel Stones.</p>
                 </div>
                 <div class="col-md-3">
                     <h5>Quick Links</h5>
@@ -378,9 +437,12 @@
     
     <!-- Initialize AOS -->
     <script>
-        AOS.init({
-            duration: 800,
-            once: true
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                startEvent: 'DOMContentLoaded'
+            });
         });
     </script>
 

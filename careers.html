@@ -98,7 +98,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <img src="images/team-work.jpg" alt="Team Work" class="img-fluid rounded shadow">
+                    <img src="images/tech/tech-office.jpg" alt="Team Work" class="img-fluid rounded shadow">
                 </div>
             </div>
         </div>
@@ -108,49 +108,64 @@
     <section class="py-5 bg-light">
         <div class="container">
             <h2 class="text-center mb-5" data-aos="fade-up">Current Openings</h2>
-            <div class="row">
-                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h3 class="card-title">Backend Developer</h3>
-                            <p class="card-text">Join our backend team to build robust and scalable solutions.</p>
-                            <h4>Requirements:</h4>
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>3+ years experience</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Node.js expertise</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Database management</li>
+            <div class="accordion mb-5" id="careersAccordion" data-aos="fade-up">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            PHP Developer (Full-time)
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#careersAccordion">
+                        <div class="accordion-body">
+                            <p><strong>Role:</strong> We are looking for a skilled PHP developer to help maintain and enhance our web applications.</p>
+                            <p><strong>Requirements:</strong></p>
+                            <ul>
+                                <li>2+ years of experience with PHP</li>
+                                <li>Experience with MySQL and frontend technologies (HTML, CSS, JavaScript)</li>
+                                <li>Knowledge of modern PHP frameworks</li>
+                                <li>Strong problem-solving skills</li>
                             </ul>
-                            <a href="#" class="btn btn-primary">Apply Now</a>
+                            <a href="#careerForm" class="btn btn-primary mt-2">Apply Now</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h3 class="card-title">Frontend Developer</h3>
-                            <p class="card-text">Create beautiful and responsive user interfaces.</p>
-                            <h4>Requirements:</h4>
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>2+ years experience</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>React/Angular</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>UI/UX knowledge</li>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            CAD Design Specialist (Full-time/Part-time)
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#careersAccordion">
+                        <div class="accordion-body">
+                            <p><strong>Role:</strong> We are seeking a CAD design specialist with experience in stone product design or architectural elements.</p>
+                            <p><strong>Requirements:</strong></p>
+                            <ul>
+                                <li>Proficient in CAD software</li>
+                                <li>Experience with stone product design preferred</li>
+                                <li>Attention to detail and precision</li>
+                                <li>Ability to meet deadlines</li>
                             </ul>
-                            <a href="#" class="btn btn-primary">Apply Now</a>
+                            <a href="#careerForm" class="btn btn-primary mt-2">Apply Now</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h3 class="card-title">Technical Support</h3>
-                            <p class="card-text">Help our clients succeed with technical expertise.</p>
-                            <h4>Requirements:</h4>
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>2+ years experience</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Problem-solving skills</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Customer service</li>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Customer Support Specialist (Full-time)
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#careersAccordion">
+                        <div class="accordion-body">
+                            <p><strong>Role:</strong> We need a customer-focused support specialist to help with client communications and operations.</p>
+                            <p><strong>Requirements:</strong></p>
+                            <ul>
+                                <li>Excellent communication skills</li>
+                                <li>Experience with customer service</li>
+                                <li>Attention to detail and organization</li>
+                                <li>Ability to learn technical concepts</li>
                             </ul>
-                            <a href="#" class="btn btn-primary">Apply Now</a>
+                            <a href="#careerForm" class="btn btn-primary mt-2">Apply Now</a>
                         </div>
                     </div>
                 </div>
@@ -203,12 +218,72 @@
         </div>
     </section>
 
+    <!-- Career Application Form -->
+    <section class="py-5 bg-light" id="careerForm" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="career-form p-4 shadow-sm rounded bg-white">
+                        <h3 class="mb-4 text-center">Apply Now</h3>
+                        <form id="careerInterestForm" onsubmit="handleCareerSubmit(event)" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Full Name*</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address*</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="position" class="form-label">Position of Interest*</label>
+                                    <select class="form-select" id="position" name="position" required>
+                                        <option value="">Select Position</option>
+                                        <option value="PHP Developer">PHP Developer</option>
+                                        <option value="CAD Design Specialist">CAD Design Specialist</option>
+                                        <option value="Customer Support Specialist">Customer Support Specialist</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="skills" class="form-label">Key Skills*</label>
+                                <textarea class="form-control" id="skills" name="skills" rows="2" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Your Message & Availability</label>
+                                <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="resume" class="form-label">Upload Resume (PDF, DOC, DOCX)*</label>
+                                <input class="form-control" type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="agree" name="agree" required>
+                                <label class="form-check-label" for="agree">I agree to the processing of my personal data in accordance with the privacy policy.</label>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit Application</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Apply Now CTA -->
     <section class="py-5 bg-primary text-white" data-aos="fade-up">
         <div class="container text-center">
             <h2 class="mb-4">Ready to Join Our Team?</h2>
-            <p class="lead mb-4">Send your resume to careers@palantiri.in</p>
-            <a href="mailto:careers@palantiri.in" class="btn btn-light btn-lg">Apply Now</a>
+            <p class="lead mb-4">Send your resume to info@palantiri.in</p>
+            <a href="mailto:info@palantiri.in" class="btn btn-light btn-lg">Apply Now</a>
         </div>
     </section>
 
@@ -218,7 +293,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <h5>Palantiri Technology and Services</h5>
-                    <p>Powering global operations from behind the scenes.</p>
+                    <p>Your dedicated technology operations partner exclusively serving Angel Stones.</p>
                 </div>
                 <div class="col-md-3">
                     <h5>Quick Links</h5>
@@ -257,9 +332,12 @@
     
     <!-- Initialize AOS -->
     <script>
-        AOS.init({
-            duration: 800,
-            once: true
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                startEvent: 'DOMContentLoaded'
+            });
         });
     </script>
 
@@ -283,6 +361,25 @@
                 href: "/privacy-policy.html"
             }
         });
+    </script>
+
+    <!-- Handle Career Form submission -->
+    <script>
+        function handleCareerSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            
+            // Basic validation
+            if (!form.checkValidity()) {
+                event.stopPropagation();
+                form.classList.add('was-validated');
+                return;
+            }
+            
+            // Show success message
+            alert('Thank you for your application. We will contact you shortly.');
+            form.reset();
+        }
     </script>
 </body>
 </html>
