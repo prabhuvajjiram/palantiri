@@ -152,18 +152,18 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Customer Support Specialist (Full-time)
+                            Digital Marketing Specialist (Full-time)
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#careersAccordion">
                         <div class="accordion-body">
-                            <p><strong>Role:</strong> We need a customer-focused support specialist to help with client communications and operations.</p>
+                            <p><strong>Role:</strong> We are seeking a creative Digital Marketing Specialist to design flyers, marketing books, and promotional materials.</p>
                             <p><strong>Requirements:</strong></p>
                             <ul>
-                                <li>Excellent communication skills</li>
-                                <li>Experience with customer service</li>
-                                <li>Attention to detail and organization</li>
-                                <li>Ability to learn technical concepts</li>
+                                <li>2+ years experience in digital marketing</li>
+                                <li>Proficient with Adobe Creative Suite or GIMP</li>
+                                <li>Strong design skills and creative portfolio</li>
+                                <li>Experience creating flyers and marketing materials</li>
                             </ul>
                             <a href="#careerForm" class="btn btn-primary mt-2">Apply Now</a>
                         </div>
@@ -225,7 +225,7 @@
                 <div class="col-lg-8 mx-auto">
                     <div class="career-form p-4 shadow-sm rounded bg-white">
                         <h3 class="mb-4 text-center">Apply Now</h3>
-                        <form id="careerInterestForm" onsubmit="handleCareerSubmit(event)" novalidate>
+                        <form id="careerInterestForm" method="post" action="includes/career_form.php" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="name" class="form-label">Full Name*</label>
@@ -247,7 +247,7 @@
                                         <option value="">Select Position</option>
                                         <option value="PHP Developer">PHP Developer</option>
                                         <option value="CAD Design Specialist">CAD Design Specialist</option>
-                                        <option value="Customer Support Specialist">Customer Support Specialist</option>
+                                        <option value="Digital Marketing Specialist">Digital Marketing Specialist</option>
                                         <option value="Other">Other</option>
                                     </select>
                                 </div>
@@ -263,15 +263,20 @@
                             <div class="mb-3">
                                 <label for="resume" class="form-label">Upload Resume (PDF, DOC, DOCX)*</label>
                                 <input class="form-control" type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                                <small class="text-muted">Maximum file size: 5MB</small>
                             </div>
                             <div class="mb-3 form-check">
                                 <input type="checkbox" class="form-check-input" id="agree" name="agree" required>
                                 <label class="form-check-label" for="agree">I agree to the processing of my personal data in accordance with the privacy policy.</label>
                             </div>
+                            <div id="formMessage" class="alert d-none mb-3"></div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary btn-lg">Submit Application</button>
                             </div>
                         </form>
+                        <div class="mt-4 alert alert-info">
+                            <p><strong>Alternative:</strong> You can also email your resume directly to <a href="mailto:hr@palantiri.in">hr@palantiri.in</a> with the position in the subject line.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -353,7 +358,6 @@
                 }
             },
             theme: "classic",
-            position: "bottom-right",
             content: {
                 message: "This website uses cookies to ensure you get the best experience on our website.",
                 dismiss: "Got it!",
@@ -365,21 +369,56 @@
 
     <!-- Handle Career Form submission -->
     <script>
-        function handleCareerSubmit(event) {
-            event.preventDefault();
-            const form = event.target;
+        document.addEventListener('DOMContentLoaded', function() {
+            const careerForm = document.getElementById('careerInterestForm');
+            const formMessage = document.getElementById('formMessage');
             
-            // Basic validation
-            if (!form.checkValidity()) {
-                event.stopPropagation();
-                form.classList.add('was-validated');
-                return;
-            }
-            
-            // Show success message
-            alert('Thank you for your application. We will contact you shortly.');
-            form.reset();
-        }
+            careerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Basic validation
+                if (!this.checkValidity()) {
+                    e.stopPropagation();
+                    this.classList.add('was-validated');
+                    return false;
+                }
+                
+                // Show loading message
+                formMessage.classList.remove('d-none', 'alert-success', 'alert-danger');
+                formMessage.classList.add('alert-info');
+                formMessage.textContent = 'Sending your application...';
+                
+                // Create FormData object
+                const formData = new FormData(this);
+                
+                // Send form data to the server
+                fetch('includes/career_form.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    // Show appropriate message
+                    formMessage.classList.remove('alert-info');
+                    
+                    if (data.trim() === 'success') {
+                        formMessage.classList.add('alert-success');
+                        formMessage.textContent = 'Thank you for your application! We will review it and get back to you soon.';
+                        careerForm.reset();
+                    } else {
+                        formMessage.classList.add('alert-danger');
+                        formMessage.textContent = 'There was a problem submitting your application. Please try again or contact us directly.';
+                    }
+                })
+                .catch(error => {
+                    // Show error message
+                    formMessage.classList.remove('alert-info');
+                    formMessage.classList.add('alert-danger');
+                    formMessage.textContent = 'There was a problem submitting your application. Please try again or contact us directly at hr@palantiri.in';
+                    console.error('Error:', error);
+                });
+            });
+        });
     </script>
 </body>
 </html>

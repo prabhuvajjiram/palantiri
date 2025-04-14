@@ -1,91 +1,127 @@
 <?php
-// Contact form handler
+// Enable error reporting for debugging
+error_reporting(E_ALL);
+ini_set('display_errors', 1); // Temporarily enable error display to debug
+ini_set('log_errors', 1);
+ini_set('error_log', '../logs/php_errors.log');
 
-// Set header to prevent direct access
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('HTTP/1.1 403 Forbidden');
-    echo 'Access forbidden';
+// Create logs directory if it doesn't exist
+$log_dir = '../logs/';
+if (!file_exists($log_dir)) {
+    $dir_created = mkdir($log_dir, 0777, true); // More permissive permissions
+    if (!$dir_created) {
+        // Try to output error directly if log creation fails
+        echo "error - Failed to create log directory. Please check server permissions.";
+        exit;
+    }
+}
+
+// Initialize log file
+$log_file = $log_dir . 'contact_form.log';
+try {
+    $log_content = date('Y-m-d H:i:s') . " - Contact form submission initiated\n";
+    if (!file_put_contents($log_file, $log_content, FILE_APPEND)) {
+        // Try to output error directly if log writing fails
+        echo "error - Failed to write to log file. Please check file permissions.";
+        exit;
+    }
+
+    // Debug output - will be visible in network tab
+    // echo "<!-- Debug: Log initialized successfully at $log_file -->\n";
+} catch (Exception $e) {
+    echo "error - Exception during log initialization: " . $e->getMessage();
     exit;
 }
 
-// Initialize response array
-$response = [
-    'success' => false,
-    'message' => '',
-];
-
-try {
-    // Validate required fields
-    $required_fields = ['name', 'email', 'subject', 'message'];
-    $missing_fields = [];
-
-    foreach ($required_fields as $field) {
-        if (empty($_POST[$field])) {
-            $missing_fields[] = $field;
-        }
-    }
-
-    if (!empty($missing_fields)) {
-        $response['message'] = 'Required fields missing: ' . implode(', ', $missing_fields);
-        echo json_encode($response);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Log the POST data
+    try {
+        $log_content = date('Y-m-d H:i:s') . " - POST data received: " . print_r($_POST, true) . "\n";
+        file_put_contents($log_file, $log_content, FILE_APPEND);
+        
+        // Debug output
+        // echo "<!-- Debug: POST data logged -->\n";
+    } catch (Exception $e) {
+        echo "error - Exception logging POST data: " . $e->getMessage();
         exit;
-    }
-
-    // Sanitize inputs
-    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
-    $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
-
-    // Validate email
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $response['message'] = 'Invalid email address';
-        echo json_encode($response);
-        exit;
-    }
-
-    // Email sending configuration
-    $to_emails = ['info@palantiri.in', 'hr@palantiri.in'];
-    $headers = "From: $name <$email>\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-
-    // Prepare email content
-    $email_content = "Name: $name\n";
-    $email_content .= "Email: $email\n";
-    $email_content .= "Subject: $subject\n\n";
-    $email_content .= "Message:\n$message";
-
-    // Send emails to both recipients
-    $mail_sent = true;
-    foreach ($to_emails as $recipient) {
-        if (!mail($recipient, "Contact Form: $subject", $email_content, $headers)) {
-            $mail_sent = false;
-        }
     }
     
-    if (!$mail_sent) {
-        $response['message'] = 'There was an issue sending your message. Please try again later.';
-        echo json_encode($response);
+    // Verify required fields exist
+    if (!isset($_POST["name"]) || !isset($_POST["email"]) || !isset($_POST["subject"]) || !isset($_POST["message"])) {
+        file_put_contents($log_file, date('Y-m-d H:i:s') . " - Error: Missing required fields\n", FILE_APPEND);
+        echo "error - Missing required fields";
         exit;
     }
+    
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $subject = $_POST["subject"];
+    $messageContent = $_POST["message"];
 
-    // Set success response
-    $response['success'] = true;
-    $response['message'] = 'Thank you for your message. We will get back to you soon.';
+    // Log the extracted data
+    $log_content = date('Y-m-d H:i:s') . " - Extracted data: Name=$name, Email=$email, Subject=$subject\n";
+    file_put_contents($log_file, $log_content, FILE_APPEND);
 
-    // Log the submission (for demonstration - in production, use proper logging)
-    $log_entry = date('Y-m-d H:i:s') . " - Contact form submission from: $name ($email)\n";
-    file_put_contents('../logs/contact_form.log', $log_entry, FILE_APPEND);
+    // You should add more validation and sanitization here for security.
+    $name = htmlspecialchars($name);
+    $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+    $subject = htmlspecialchars($subject);
+    $messageContent = htmlspecialchars($messageContent);
 
-} catch (Exception $e) {
-    $response['message'] = 'An error occurred while processing your request.';
-    // Log the error (for demonstration)
-    error_log($e->getMessage());
+    // Log after sanitization
+    $log_content = date('Y-m-d H:i:s') . " - After sanitization: Name=$name, Email=$email, Subject=$subject\n";
+    file_put_contents($log_file, $log_content, FILE_APPEND);
+
+    $to = "info@palantiri.in"; // Primary recipient
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+
+    $message = "<html><body>";
+    $message .= "<h1>Palantiri - Website Contact Form</h1>";
+    $message .= "<p><strong>Name:</strong> $name</p>";
+    $message .= "<p><strong>Email:</strong> $email</p>";
+    $message .= "<p><strong>Subject:</strong> $subject</p>";
+    $message .= "<p><strong>Message:</strong></p>";
+    $message .= "<p>$messageContent</p>";
+    $message .= "</body></html>";
+
+    // Log the email sending attempt
+    $log_content = date('Y-m-d H:i:s') . " - Attempting to send email to: $to\n";
+    file_put_contents($log_file, $log_content, FILE_APPEND);
+
+    // Attempt to send email and log the result
+    $mail_result = mail($to, "Contact Form: $subject", $message, $headers);
+    $log_content = date('Y-m-d H:i:s') . " - Mail function returned: " . ($mail_result ? "SUCCESS" : "FAILURE") . "\n";
+    file_put_contents($log_file, $log_content, FILE_APPEND);
+
+    if ($mail_result) {
+        // Try to send to hr as well
+        $cc_result = mail("hr@palantiri.in", "Contact Form: $subject", $message, $headers);
+        $log_content = date('Y-m-d H:i:s') . " - CC Mail to hr@palantiri.in returned: " . ($cc_result ? "SUCCESS" : "FAILURE") . "\n";
+        file_put_contents($log_file, $log_content, FILE_APPEND);
+        
+        // Success - Just output the word "success" with no HTML or whitespace
+        header('Content-Type: text/plain');
+        echo "success";
+        exit;
+    } else {
+        // Log the failure with additional info
+        $log_content = date('Y-m-d H:i:s') . " - Mail sending failed. Additional info:\n";
+        $log_content .= "PHP mail.log may contain more details.\n";
+        $log_content .= "PHP version: " . phpversion() . "\n";
+        $log_content .= "Server software: " . $_SERVER['SERVER_SOFTWARE'] . "\n";
+        file_put_contents($log_file, $log_content, FILE_APPEND);
+        
+        // Error - Just output the word "error" with no HTML or whitespace
+        header('Content-Type: text/plain');
+        echo "error";
+        exit;
+    }
+} else {
+    $log_content = date('Y-m-d H:i:s') . " - Invalid request method: " . $_SERVER["REQUEST_METHOD"] . "\n";
+    file_put_contents($log_file, $log_content, FILE_APPEND);
+    echo "error";
 }
-
-// Return response as JSON
-header('Content-Type: application/json');
-echo json_encode($response);
-exit;
+?>

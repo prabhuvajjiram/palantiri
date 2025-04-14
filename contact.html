@@ -118,25 +118,29 @@
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="contact-form p-4 bg-light rounded">
                         <h3 class="mb-4">Send us a Message</h3>
-                        <form id="contactForm">
+                        <form id="contactForm" method="post" action="includes/contact_form.php">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Your Name</label>
-                                <input type="text" class="form-control" id="name" required>
+                                <input type="text" class="form-control" id="name" name="name" required>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Your Email</label>
-                                <input type="email" class="form-control" id="email" required>
+                                <input type="email" class="form-control" id="email" name="email" required>
                             </div>
                             <div class="mb-3">
                                 <label for="subject" class="form-label">Subject</label>
-                                <input type="text" class="form-control" id="subject" required>
+                                <input type="text" class="form-control" id="subject" name="subject" required>
                             </div>
                             <div class="mb-3">
                                 <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                             </div>
+                            <div id="contactMessage" class="alert d-none mb-3"></div>
                             <button type="submit" class="btn btn-primary">Send Message</button>
                         </form>
+                        <div class="mt-4 alert alert-info">
+                            <p><strong>Note:</strong> If the form doesn't work, please email us directly at <a href="mailto:info@palantiri.in">info@palantiri.in</a> or contact us via WhatsApp.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -330,6 +334,61 @@
                 link: "Learn more",
                 href: "/privacy-policy.html"
             }
+        });
+    </script>
+
+    <!-- Handle Contact Form submission -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const contactMessage = document.getElementById('contactMessage');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Basic validation
+                if (!this.checkValidity()) {
+                    e.stopPropagation();
+                    this.classList.add('was-validated');
+                    return false;
+                }
+                
+                // Show loading message
+                contactMessage.classList.remove('d-none', 'alert-success', 'alert-danger');
+                contactMessage.classList.add('alert-info');
+                contactMessage.textContent = 'Sending your message...';
+                
+                // Create FormData object
+                const formData = new FormData(this);
+                
+                // Send form data to the server
+                fetch('includes/contact_form.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    // Show appropriate message
+                    contactMessage.classList.remove('alert-info');
+                    console.log('Response data:', data); // Debug logging
+                    
+                    if (data.includes('success')) {
+                        contactMessage.classList.add('alert-success');
+                        contactMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+                        contactForm.reset();
+                    } else {
+                        contactMessage.classList.add('alert-danger');
+                        contactMessage.textContent = 'There was a problem sending your message. Please try again or contact us directly.';
+                    }
+                })
+                .catch(error => {
+                    // Show error message
+                    contactMessage.classList.remove('alert-info');
+                    contactMessage.classList.add('alert-danger');
+                    contactMessage.textContent = 'There was a problem sending your message. Please try again or contact us directly at info@palantiri.in';
+                    console.error('Error:', error);
+                });
+            });
         });
     </script>
 </body>
