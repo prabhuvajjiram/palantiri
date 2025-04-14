@@ -8,6 +8,23 @@
     <meta name="author" content="Palantiri Technology and Services">
     <title>Portfolio - Palantiri Technology and Services</title>
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- AOS - Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -17,27 +34,23 @@
         "description": "Explore Palantiri's portfolio of technology solutions and projects in backend operations, software development, and technical support.",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://palantiri-tech.com/portfolio"
+            "@id": "https://palantiri.in/portfolio"
         },
         "publisher": {
             "@type": "Organization",
             "name": "Palantiri Technology and Services",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://palantiri-tech.com/images/logo.png"
+                "url": "https://palantiri.in/images/logo.png"
             }
         }
     }
     </script>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Header/Navigation -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-aos="fade-up">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
                     <img src="images/logo.png" alt="Palantiri Logo" height="40" class="me-2">
@@ -73,7 +86,7 @@
     </header>
 
     <!-- Portfolio Hero Section -->
-    <section class="about-section">
+    <section class="about-section py-5 bg-light" data-aos="fade-up">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
@@ -85,7 +98,7 @@
     </section>
 
     <!-- Portfolio Filter -->
-    <section class="py-3">
+    <section class="py-3" data-aos="fade-up">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -101,113 +114,135 @@
     </section>
 
     <!-- Portfolio Grid -->
-    <section class="portfolio-grid">
+    <section class="portfolio-grid py-5">
         <div class="container">
             <div class="row">
                 <!-- Project 1 -->
-                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="client-facing">
-                    <div class="portfolio-item">
+                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="client-facing" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-item shadow">
                         <img src="images/tech/tech-crm.svg" alt="Angel Stones CRM System - Comprehensive CRM solution for order management and customer tracking" class="portfolio-image" loading="lazy">
                         <div class="portfolio-tag">Client-Facing</div>
                         <div class="portfolio-info">
                             <h4>Angel Stones CRM System</h4>
                             <p>Comprehensive CRM solution for order management and customer tracking</p>
-                            <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#portfolioModal1">More Info</button>
+                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#portfolioModal1">More Info</button>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project 2 -->
-                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="internal">
-                    <div class="portfolio-item">
+                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="internal" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-item shadow">
                         <img src="images/tech/tech-automation.svg" alt="Order Processing Automation - Streamlined system for efficient order management" class="portfolio-image" loading="lazy">
                         <div class="portfolio-tag">Internal</div>
                         <div class="portfolio-info">
                             <h4>Order Processing Automation</h4>
                             <p>Streamlined system for efficient order management</p>
-                            <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#portfolioModal2">More Info</button>
+                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#portfolioModal2">More Info</button>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project 3 -->
-                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="client-facing">
-                    <div class="portfolio-item">
+                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="client-facing" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-item shadow">
                         <img src="images/tech/tech-ecommerce.svg" alt="E-commerce Integration - Seamless integration solution for online sales platforms" class="portfolio-image" loading="lazy">
                         <div class="portfolio-tag">Client-Facing</div>
                         <div class="portfolio-info">
                             <h4>E-commerce Integration</h4>
                             <p>Seamless integration solution for online sales platforms</p>
-                            <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#portfolioModal3">More Info</button>
+                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#portfolioModal3">More Info</button>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project 4 -->
-                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="in-development">
-                    <div class="portfolio-item">
+                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="in-development" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-item shadow">
                         <img src="images/tech/tech-inventory-simple.svg" alt="Mobile Inventory Management - Real-time inventory tracking application for mobile devices" class="portfolio-image" loading="lazy">
                         <div class="portfolio-tag">In Development</div>
                         <div class="portfolio-info">
                             <h4>Mobile Inventory Management</h4>
                             <p>Real-time inventory tracking application for mobile devices</p>
-                            <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#portfolioModal4">More Info</button>
+                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#portfolioModal4">More Info</button>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project 5 -->
-                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="internal">
-                    <div class="portfolio-item">
+                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="internal" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-item shadow">
                         <img src="images/tech/tech-office.svg" alt="CAD Design Tool - Custom-built tool for streamlining CAD design modification process" class="portfolio-image" loading="lazy">
                         <div class="portfolio-tag">Internal</div>
                         <div class="portfolio-info">
                             <h4>CAD Design Tool</h4>
                             <p>Custom-built tool for streamlining CAD design modification process</p>
-                            <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#portfolioModal5">More Info</button>
+                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#portfolioModal5">More Info</button>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project 6 -->
-                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="in-development">
-                    <div class="portfolio-item">
+                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="in-development" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-item shadow">
                         <img src="images/tech/tech-communication.svg" alt="Client Communication Portal - Secure portal for client communications and document sharing" class="portfolio-image" loading="lazy">
                         <div class="portfolio-tag">In Development</div>
                         <div class="portfolio-info">
                             <h4>Client Communication Portal</h4>
                             <p>Secure portal for client communications and document sharing</p>
-                            <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#portfolioModal6">More Info</button>
+                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#portfolioModal6">More Info</button>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project 7 - AI/ML Project -->
-                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="in-development">
-                    <div class="portfolio-item">
+                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="in-development" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-item shadow">
                         <img src="images/tech/tech-ai.svg" alt="AI-Powered Order Prediction System - Machine learning system for inventory forecasting and order management" class="portfolio-image" loading="lazy">
                         <div class="portfolio-tag">In Development</div>
                         <div class="portfolio-info">
                             <h4>AI-Powered Order Prediction</h4>
                             <p>Machine learning system for inventory forecasting and order management</p>
-                            <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#portfolioModal7">More Info</button>
+                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#portfolioModal7">More Info</button>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project 8 - Rajambal Cottons E-commerce -->
-                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="client-facing">
-                    <div class="portfolio-item">
+                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="client-facing" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-item shadow">
                         <img src="images/tech/tech-ecommerce.svg" alt="Rajambal Cottons E-commerce - Complete e-commerce solution for premium cotton products retailer" class="portfolio-image" loading="lazy">
                         <div class="portfolio-tag">Client-Facing</div>
                         <div class="portfolio-info">
                             <h4>Rajambal Cottons E-commerce</h4>
                             <p>Complete e-commerce solution for premium cotton products retailer</p>
-                            <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#portfolioModal8">More Info</button>
+                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#portfolioModal8">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 9 - Billing System -->
+                <div class="col-md-4 mb-4 portfolio-item-wrapper" data-category="internal" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-item shadow">
+                        <img src="images/tech/tech-admin.svg" alt="Integrated Billing System - Comprehensive billing and invoicing system for business operations" class="portfolio-image" loading="lazy">
+                        <div class="portfolio-tag">Internal</div>
+                        <div class="portfolio-info">
+                            <h4>Integrated Billing System</h4>
+                            <p>Comprehensive billing and invoicing system for business operations</p>
+                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#portfolioModal9">More Info</button>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white" data-aos="fade-up">
+        <div class="container text-center">
+            <h2 class="mb-4">Have a Project in Mind?</h2>
+            <p class="lead mb-4">Let's discuss how our team can help bring your vision to reality</p>
+            <a href="contact.html" class="btn btn-light btn-lg">Contact Us Today</a>
         </div>
     </section>
 
@@ -567,17 +602,52 @@
         </div>
     </div>
 
-    <!-- Call to Action -->
-    <section class="cta-section py-5 bg-primary text-white">
-        <div class="container text-center">
-            <h2 class="mb-4">Interested in our work?</h2>
-            <p class="mb-4">Contact us to discuss how we can create a custom solution for your business.</p>
-            <a href="contact.html" class="btn btn-light btn-lg">Get in Touch</a>
+    <!-- Modal 9 -->
+    <div class="modal fade" id="portfolioModal9" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Integrated Billing System</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/tech/tech-admin.svg" alt="Integrated Billing System" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Project Overview</h4>
+                            <p>Comprehensive billing and invoicing system for business operations</p>
+                            
+                            <h5>Key Features:</h5>
+                            <ul>
+                                <li>Automated billing and invoicing</li>
+                                <li>Multi-currency support</li>
+                                <li>Tax calculation and compliance</li>
+                                <li>Payment gateway integration</li>
+                                <li>Reporting and analytics</li>
+                            </ul>
+                            
+                            <h5>Technologies Used:</h5>
+                            <p>PHP, Laravel, MySQL</p>
+                            
+                            <h5>Client:</h5>
+                            <p>Internal</p>
+                            
+                            <h5>Status:</h5>
+                            <p>In development (50% complete)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
-    <footer class="footer py-4 bg-dark text-white">
+    <footer class="footer py-4 bg-dark text-white" data-aos="fade-up">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -598,7 +668,7 @@
                 <div class="col-md-3">
                     <h5>Contact</h5>
                     <ul class="list-unstyled">
-                        <li><i class="bi bi-envelope"></i> <a href="mailto:info@palantiri.com">info@palantiri.com</a></li>
+                        <li><i class="bi bi-envelope"></i> <a href="mailto:info@palantiri.in">info@palantiri.in</a></li>
                         <li><i class="bi bi-whatsapp"></i> <a href="https://wa.me/1234567890">WhatsApp</a></li>
                     </ul>
                 </div>
@@ -613,8 +683,65 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js"></script>
     <script src="js/script.js"></script>
+
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+
+    <!-- Portfolio Filter Script -->
+    <script>
+        $(document).ready(function() {
+            // Portfolio filtering
+            $('.portfolio-filter button').on('click', function() {
+                var filterValue = $(this).attr('data-filter');
+                
+                // Toggle active class on buttons
+                $('.portfolio-filter button').removeClass('active');
+                $(this).addClass('active');
+                
+                // Show/hide items based on filter
+                if (filterValue === 'all') {
+                    $('.portfolio-item-wrapper').show();
+                } else {
+                    $('.portfolio-item-wrapper').hide();
+                    $('.portfolio-item-wrapper[data-category="' + filterValue + '"]').show();
+                }
+                
+                // Refresh AOS animations
+                AOS.refresh();
+            });
+        });
+    </script>
+
+    <!-- Initialize Cookie Consent -->
+    <script>
+        window.cookieconsent.initialise({
+            palette: {
+                popup: {
+                    background: "#000"
+                },
+                button: {
+                    background: "#0056b3"
+                }
+            },
+            theme: "classic",
+            position: "bottom-right",
+            content: {
+                message: "This website uses cookies to ensure you get the best experience on our website.",
+                dismiss: "Got it!",
+                link: "Learn more",
+                href: "/privacy-policy.html"
+            }
+        });
+    </script>
 </body>
 </html>
